@@ -1,0 +1,376 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1A1A1A; 
+    overflow-x: hidden; /*  Evita el scroll horizontal */
+    
+}
+
+.italic-heading {
+    font-style: italic;
+}
+
+
+header {
+    background-color:  rgba(0, 0, 0, 0.9); 
+    padding: 1rem;
+    margin: 10px auto; /* Separación del borde de la pantalla */
+    max-width: 1200px; /* Ancho máximo para evitar que ocupe todo el ancho en pantallas grandes */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: relative;
+    z-index: 10;
+}
+.blanco{
+    color: white;
+}
+.gris{
+    color: grey;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px; /* Botones más suaves */
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con transparencia */
+}
+
+
+.logo img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Main Section */
+main {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1200px; /* Limita el ancho máximo si es necesario */
+    min-width: 320px; /* Evita que el contenedor sea más pequeño que este tamaño */
+    margin: 0 auto; /* Centrar el contenido si hay un límite de ancho */
+    padding: 20px;
+    box-sizing: border-box; /* Asegura que el padding esté incluido en el ancho total */
+    background-color: #1A1A1A; 
+}
+
+h1, h2, h3 {
+    color: yellowgreen;
+    text-align: center;
+}
+
+.cta-buttons {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cta-buttons .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    background-color: #785ae2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-buttons .btn:hover {
+    background-color: #218838;
+}
+
+/* Carrusel */
+.carousel {
+    width: 100%; /* Hace que ocupe el 100% del contenedor padre */
+    max-width: 1200px; /* Limita el tamaño máximo del carousel */
+    margin: 0 auto; /* Centrar el carousel */
+    overflow: visible; /* Permite que el contenido se muestre fuera del contenedor */
+    position: relative; /* Necesario si estás usando posiciones absolutas en hijos */
+}
+
+.carousel .slick-slide {
+    margin: 0 5px; /* Margen lateral reducido para achicar el espacio */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carousel .slick-center img {
+    transform: scale(1.3); /* Agranda la imagen centrada */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para resaltar la imagen centrada */
+}
+.carousel-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cada item será de mínimo 250px */
+    gap: 10px; /* Espacio entre los items */
+}
+
+.carousel img {
+    width: 75%;
+    height: auto; /* Mantiene la relación de aspecto */
+    max-width: 100%; /* Evita que la imagen crezca demasiado */
+    border-radius: 5px;
+    transition: transform 0.5s, box-shadow 0.5s; /* Efecto de resalte */
+    cursor: pointer;
+}
+.carousel img:hover {
+    transform: scale(1.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    z-index: 9999; /* Asegura que esté por encima de todo */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Botón de cerrar */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+/* Sección de columnas SECTION*/
+#image-columns {
+    display: grid;
+    
+    grid-template-columns: repeat(4, minmax(50px, 1fr)); /* Mínimo de 200px por columna */
+    gap: 20px; /* Espacio entre las columnas */
+    padding: 1rem;
+}
+
+#image-columns .column {
+    text-align: center; /* Centrar el contenido dentro de cada columna */
+}
+
+#image-columns img {
+    width: 100%; /* Imagen ocupa todo el ancho de la columna */
+    height: auto;
+    max-width: 300px; /* Limitar el ancho máximo de las imágenes */
+    border-radius: 10px; /* Opcional: Bordes redondeados */
+}
+
+#image-columns h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+#image-columns p {
+    font-size: 1rem;
+    color: grey; /* Color de texto opcional */
+    text-align: justify; /* Alineación justificada del párrafo */
+}
+
+
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo negro con transparencia */
+    color: white;
+    padding: 1rem;
+    margin: 10px auto; /* Separación del borde de la pantalla */
+    max-width: 1200px; /* Ancho máximo */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: relative;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 2rem;
+}
+footer .logo img {
+    height: 150px; /* Logo más pequeño para el footer */
+    width: 150px;
+    border-radius: 50%;
+}
+
+.contact-info p, .social-media, .map {
+    margin: 0;
+    padding: 1rem 0;
+}
+.centrar{
+    text-align: center;
+}
+.izquierda{
+    text-align: left;
+}
+.manuscrita{
+    font-family: 'Dancing Script', cursive; /* Aplica la fuente manuscrita */
+}
+
+/* Contenedor de íconos de contacto */
+.contact-info a {
+    margin: 0 15px;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #1da1f2;
+}
+
+
+.social-media a i {
+    font-size: 2rem;
+    color: #89e93b;
+    margin: 0 10px;
+    transition: transform 0.3s; /* Transición en hover */
+}
+
+
+.social-media a i:hover {
+    transform: scale(1.2); /* Efecto de ampliación en hover */
+}
+.map iframe {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px; /* Bordes redondeados para el mapa */
+    border: none;
+}
+
+
+/* Estilo de la sección de categorías */
+#categorias {
+    padding: 2rem;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.flex-item {
+    text-align: center;
+}
+
+.flex-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+}
+
+.flex-item h3 {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.flex-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Efecto de zoom al pasar el ratón por encima */
+.flex-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 1rem;
+        margin: 10px 10px 10px 10px; /* Reduce la separación lateral en pantallas más pequeñas */
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .carousel img {
+        border-radius: 3px;
+    }
+    #image-columns {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+    .flex-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cta-buttons .btn {
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+    }
+}
+/* Media Queries para iPhone 12 Pro (390px de ancho) */
+@media (max-width: 400px) {
+    header, footer {
+        padding: 1rem;
+        margin: 10px 10px 10px 10px; /* Reduce la separación lateral en pantallas más pequeñas */
+    }
+    footer .footer-content {
+        flex-direction: column; /* Organizar en columna */
+        text-align: center; /* Alinear al centro */
+    }
+    .carousel img {
+        border-radius: 3px;
+    }
+    #image-columns {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    footer .logo img {
+        width: 60px; /* Reducir el tamaño del logo */
+        height: 60px;
+    }
+
+    .contact-info {
+        margin-top: 1rem;
+    }
+
+    .social-media {
+        margin-top: 1rem;
+    }
+
+    .map {
+        margin-top: 1rem;
+    }
+
+    .map iframe {
+        
+        height: 100px; /* Ajusta la altura para pantallas pequeñas */
+    }
+}
